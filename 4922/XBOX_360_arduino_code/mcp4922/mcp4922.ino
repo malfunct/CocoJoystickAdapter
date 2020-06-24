@@ -38,6 +38,22 @@ void loop() {
     int leftHatX = Xbox.getAnalogHat(LeftHatX);
     int leftHatY = Xbox.getAnalogHat(LeftHatY);
 
+    int rightHatX = Xbox.getAnalogHat(RightHatX);
+    int rightHatY = Xbox.getAnalogHat(RightHatY);
+
+    // if you are using only the right stick replace
+    // left stick values with right stick values to
+    // enable the use of either stick
+    if(abs(rightHatX) > 4000 && abs(leftHatX) <= 4000)
+    {
+      leftHatX == rightHatX;
+    }
+
+    if(abs(rightHatY) > 4000 && abs(leftHatY) <= 4000)
+    {
+      leftHatY == rightHatY;
+    }
+
     // create a dead zone in the middle
     if(leftHatX < 0) {leftHatX += 4000; if(leftHatX > 0) leftHatX = 0;}
     if(leftHatX > 0) {leftHatX -= 4000; if(leftHatX < 0) leftHatX = 0;}
