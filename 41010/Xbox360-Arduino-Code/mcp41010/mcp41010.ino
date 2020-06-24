@@ -1,12 +1,10 @@
+#include <SPI.h>
 #include <XBOXUSB.h>
-#define ENABLE_UHS_DEBUGGING 1
 
 // Satisfy the IDE, which needs to see the include statment in the ino too.
 #ifdef dobogusinclude
 #include <spi4teensy3.h>
 #endif
-
-#include <SPI.h>
 
 USB Usb;
 XBOXUSB Xbox(&Usb);
@@ -17,7 +15,11 @@ int button1 = 3;
 int button2 = 2;
 
 void setup() {
+  
+  Serial.begin(9600);
+  
   if (Usb.Init() == -1) {
+    Serial.print("USB fail");
     while (1); //halt
   }
   
@@ -30,7 +32,6 @@ void setup() {
   pinMode(button1,OUTPUT);
   pinMode(button2,OUTPUT);
 
-//  Serial.begin(9600);
 }
 
 void loop() {
@@ -84,6 +85,10 @@ void loop() {
     MCP41010Write(tandyY,SS0);
     digitalWrite(button1,press1);
     digitalWrite(button2,press2);
+  }
+  else
+  {
+    Serial.println("Not connected.");
   }
 }
 
