@@ -7,4 +7,4 @@
 2 - 6 pin single row arduino stackable shield header
 2 - 8 pin single row arduino stackable shield header
 1 - Arduino Uno R3 (or clone)
-1 - Keyes USB Host Shield (other brands did not work for me)
+1 - Keyes USB Host Shield https://www.fasttech.com/product/1144300-keyes-usb-host-shield-for-arduino (other brands did not work for me) 

@@ -1,0 +1,8 @@
+Need these libraries available to build code:
+
+Adafruit BusIO (for SPI library) available in Library Manager in Arduino IDE
+
+USB Host Library 2.0 available in Library Manager in Arduino IDE
+
+DAC_MCP49xx library available at: https://github.com/exscape/electronics/tree/master/Arduino/Libraries/DAC_MCP49xx
+	download entire DAC_MCP49xx folder and copy the foldre to your arduino library folder
