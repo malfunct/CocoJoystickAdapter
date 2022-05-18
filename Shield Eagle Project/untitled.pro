@@ -1,13 +1,13 @@
 EAGLE AutoRouter Statistics:
 
-Job           : F:/Users/malfu/OneDrive/Documents/EAGLE/projects/Joystick Shield 4299/untitled.brd
+Job           : F:/source/CocoJoystickAdapter/Shield Eagle Project/untitled.brd
 
-Start at      : 00:06:01 (5/17/2020)
-End at        : 00:06:07 (5/17/2020)
+Start at      : 23:01:42 (5/17/2022)
+End at        : 23:01:46 (5/17/2022)
 Elapsed time  : 00:00:01
 
-Signals       :    15   RoutingGrid: 6 mil  Layers: 2
-Connections   :    24   predefined:  23 ( 0 Vias )
+Signals       :    16   RoutingGrid: 6 mil  Layers: 2
+Connections   :    25   predefined:  23 ( 0 Vias )
 
 Router memory :   2810048
 
@@ -18,8 +18,8 @@ Number of Ripups  :         0         0         0         0         0         0
 max. Level        :         0         0         0         0         0         0
 max. Total        :         0         0         0         0         0         0
 
-Routed            :         1         1         1         1         1         1
-Vias              :         0         0         0         0         0         0
+Routed            :         2         2         2         2         2         2
+Vias              :         0         0         1         1         1         1
 Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
 Final             : 100.0% finished
