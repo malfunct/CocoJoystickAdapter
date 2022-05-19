@@ -2,7 +2,7 @@
 1 - TLP222A-2 dual solid state relay
 1 - MCP4922 dual channel 12bit DAC with SPI
 1 - 0.1uF ceramic capcitor
-1 - 103 ohm 1/8 watt resistor
+1 - 130 ohm 1/8 watt resistor
 1 - 14 pin DIP socket
 1 - 8 pin DIP socket
 2 - 6 pin single row arduino stackable shield header
