@@ -7247,6 +7247,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-024X044" package3d_urn="urn:adsk.eagle:package:23643/1" value="0.1uF"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="adafruit" deviceset="R-US_" device="0207/7" value="130 ohm"/>
+<part name="R2" library="adafruit" deviceset="R-US_" device="0207/7" value="130 ohm"/>
+<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7300,6 +7302,13 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="R1" gate="G$1" x="76.2" y="22.86" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.7014" y="19.05" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="79.502" y="19.05" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R2" gate="G$1" x="68.58" y="22.86" smashed="yes" rot="R90">
+<attribute name="NAME" x="67.0814" y="19.05" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="71.882" y="19.05" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND8" gate="1" x="68.58" y="12.7" smashed="yes">
+<attribute name="VALUE" x="66.04" y="10.16" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -7444,6 +7453,11 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="15.24" x2="76.2" y2="17.78" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="GND8" gate="1" pin="GND"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="68.58" y1="15.24" x2="68.58" y2="17.78" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -7483,12 +7497,18 @@ Source: AVX .. aphvc.pdf</description>
 <segment>
 <pinref part="Q1" gate="G$1" pin="CATHODE_2"/>
 <wire x1="76.2" y1="38.1" x2="78.74" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="Q1" gate="G$1" pin="CATHODE_1"/>
-<wire x1="78.74" y1="43.18" x2="76.2" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="43.18" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="27.94" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
-<junction x="76.2" y="38.1"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="68.58" y1="27.94" x2="68.58" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="33.02" x2="73.66" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="33.02" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="CATHODE_1"/>
+<wire x1="73.66" y1="43.18" x2="78.74" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
